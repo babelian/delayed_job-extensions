@@ -36,7 +36,7 @@ module Delayed
       alias negative_failure_message failure_message_when_negated
 
       def scope(target)
-        scope = Delayed::Job.performable(target, @expected, *args)
+        scope = Delayed::Job.by_performable(target, @expected, *args)
         scope = scope.where(run_at: run_at) if run_at
         scope
       end
