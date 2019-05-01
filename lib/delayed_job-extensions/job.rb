@@ -5,7 +5,7 @@ module Delayed
   module Backend
     module ActiveRecord
       class Job < ::ActiveRecord::Base
-        extend DelayedJob::Extensions::Utility
+        extend Delayed::Extensions::Utility
 
         attr_accessible :priority, :run_at, :queue, :payload_object,
                         :failed_at, :locked_at, :locked_by, :handler,
