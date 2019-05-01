@@ -1,0 +1,9 @@
+version: '3.6'
+services:
+  app:
+    tty: true
+    stdin_open: true
+    build: .
+    command: bash
+    volumes:
+      - .:/app
