@@ -4,7 +4,7 @@ module Delayed
       def payload_object_from_args(*args)
         klass = args.shift
         meth  = args.shift
-        if klass.class == Class && klass < ActionMailer::Base
+        if defined?(ActionMailer::Base) && klass.class == Class && klass < ActionMailer::Base
           Delayed::PerformableMailer.new(klass, meth, args)
         else
           Delayed::PerformableMethod.new(klass, meth, args)
