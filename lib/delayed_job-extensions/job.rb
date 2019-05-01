@@ -7,9 +7,9 @@ module Delayed
       class Job < ::ActiveRecord::Base
         extend Delayed::Extensions::Utility
 
-        attr_accessible :priority, :run_at, :queue, :payload_object,
-                        :failed_at, :locked_at, :locked_by, :handler,
-                        :unique_key
+        # attr_accessible :priority, :run_at, :queue, :payload_object,
+        #                 :failed_at, :locked_at, :locked_by, :handler,
+        #                 :unique_key
 
         #
         # Named Scopes
