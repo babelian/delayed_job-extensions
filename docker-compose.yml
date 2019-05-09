@@ -4,6 +4,6 @@ services:
     tty: true
     stdin_open: true
     build: .
-    command: bash
     volumes:
       - .:/app
+      - ~/.gitconfig:/etc/gitconfig
